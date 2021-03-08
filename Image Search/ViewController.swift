@@ -60,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UISearchBarD
     }
     
     func fetchPhotos(query : String){
-        guard let url = URL(string: "https://api.unsplash.com/search/photos?page=1&per_page=30&query=\(query)&client_id=wsndJL2X6CsxZRq5pkhK0KR9AN1XWbsYXW2bdHTj2FE") else {
+        guard let url = URL(string: "https://api.unsplash.com/search/photos?page=1&per_page=30&query=\(query)&client_id=INSERT YOUR API KEY HERE") else {
             return
         }
         let task = URLSession.shared.dataTask(with: url) {[weak self] (data, _, error) in
